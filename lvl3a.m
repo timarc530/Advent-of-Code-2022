@@ -9,9 +9,9 @@ for i = 1:length(inputs)
     %end
     match = false;
     j = 1;
-    %left = inputs{i}(1:length(inputs{i})/2);
-    %right = inputs{i}(1 + length(inputs{i})/2:end);
-    while match == false && j < 53
+    left = inputs{i}(1:length(inputs{i})/2);
+    right = inputs{i}(1 + length(inputs{i})/2:end);
+    while match == false && j < length(searchSpace) + 1
         if contains(left,searchSpace(j)) && contains(right,searchSpace(j))
             match = true;
             prioritySum = prioritySum + j;

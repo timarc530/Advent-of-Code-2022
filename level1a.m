@@ -1,5 +1,5 @@
-total = 0
-subtotal = 0
+total = 0;
+subtotal = 0;
 for i = 1:length(caloryList)
     if isnan(caloryList(i))
         % add entry to total
