@@ -1,0 +1,8 @@
+overlapCount = 0;
+for i = 1:length(elf1)
+    firstElf  = strsplit(elf1{i},'-');
+    secondElf = strsplit(elf2{i},'-');
+    if firstElf{1} == secondElf{1} || firstElf{2} == secondElf{2}
+        overlapCount = overlapCount + 1;
+    end
+end
