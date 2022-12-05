@@ -11,10 +11,8 @@ while ischar(tline)
     moveFrom = str2double(moveData(2));
     moveTo = str2double(moveData(3));
     
-    for i = 1:moveCount
-        [crates{moveFrom}, crates{moveTo}] = craneMove(crates{moveFrom}, crates{moveTo}, 1);
-    end
-    
+    [crates{moveFrom}, crates{moveTo}] = craneMove(crates{moveFrom}, crates{moveTo}, moveCount);
+
     tline = fgetl(fid);
 end
 fclose(fid);
